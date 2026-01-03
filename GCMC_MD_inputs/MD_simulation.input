@@ -1,0 +1,46 @@
+SimulationType                MolecularDynamics
+NumberOfCycles                2000000
+NumberOfEquilibrationCycles   10000
+NumberOfInitializationCycles  1000
+PrintEvery                    5000
+RestartFile                   no
+
+Ensemble                      NVT
+
+ChargeMethod                  Ewald
+CutOff                        13.0
+TimeStep                      0.0005
+Forcefield                    Local
+EwaldPrecision                1e-6
+
+Framework 0
+FrameworkName nott-300
+UnitCells 2 2 3
+ExternalTemperature 298.0
+ComputeMSD yes
+PrintMSDEvery 5000
+WriteMSDToFile yes
+
+Component 0 MoleculeName                   O2
+            MoleculeDefinition Local
+            TranslationProbability         0.5
+		 ReinsertionProbability		   0.5
+            RotationProbability            0.5
+            RegrowProbability              0.5
+            IdentityChangeProbability      0.0
+              NumberOfIdentityChanges      2
+              IdentityChangesList          0 1 
+            SwapProbability                0.0 
+            CreateNumberOfMolecules        150
+
+Component 1 MoleculeName                   H2S
+            MoleculeDefinition Local
+            TranslationProbability         0.5
+			ReinsertionProbability		   0.5
+			RotationProbability            0.5
+			RegrowProbability              0.5
+            IdentityChangeProbability      0.0
+              NumberOfIdentityChanges      2
+              IdentityChangesList          0 1 
+            SwapProbability                0.0 
+            CreateNumberOfMolecules        3

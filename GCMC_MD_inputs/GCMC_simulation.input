@@ -1,0 +1,38 @@
+SimulationType                 MonteCarlo
+NumberOfCycles                 25000
+NumberOfInitializationCycles   1000
+
+UseChargesFromCIFFile          yes
+ChargeMethod                  Ewald
+EwaldPrecision                1e-6
+CutOff                         13.0
+
+Framework                      0
+FrameworkName nott-300_pacmof
+UnitCells 2 2 3
+ExternalTemperature            298.0
+ExternalPressure               10000.0 100000.0 1000000.0
+
+Component 0 MoleculeName                   N2
+            MolFraction                    0.5
+            TranslationProbability         0.5
+			ReinsertionProbability		   0.5
+			RotationProbability            0.5
+            RegrowProbability              0.5
+            IdentityChangeProbability      1.0
+              NumberOfIdentityChanges      2
+              IdentityChangesList          0 1 
+            SwapProbability                1.0 
+            CreateNumberOfMolecules        0
+
+Component 1 MoleculeName                   methane
+            MolFraction                    0.5
+            TranslationProbability         0.5
+			ReinsertionProbability		   0.5
+			RotationProbability            0.5
+			RegrowProbability              0.5
+            IdentityChangeProbability      1.0
+              NumberOfIdentityChanges      2
+              IdentityChangesList          0 1 
+            SwapProbability                1.0 
+            CreateNumberOfMolecules        0 
